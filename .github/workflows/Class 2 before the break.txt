@@ -1,0 +1,531 @@
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker -- version
+Client: Docker Engine - Community
+ Version:           19.03.8
+ API version:       1.40
+ Go version:        go1.12.17
+ Git commit:        afacb8b
+ Built:             Wed Mar 11 01:23:10 2020
+ OS/Arch:           windows/amd64
+ Experimental:      false
+
+Server: Docker Engine - Community
+ Engine:
+  Version:          19.03.8
+  API version:      1.40 (minimum version 1.24)
+  Go version:       go1.12.17
+  Git commit:       afacb8b
+  Built:            Wed Mar 11 01:37:20 2020
+  OS/Arch:          windows/amd64
+  Experimental:     false
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker --version
+Docker version 19.03.8, build afacb8b
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ ls
+'3D Objects'/
+Anaconda3/
+AppData/
+'Application Data'@
+C++/
+Contacts/
+Cookies@
+Desktop/
+Documents/
+Downloads/
+Favorites/
+Links/
+'Local Settings'@
+MicrosoftEdgeBackups/
+Music/
+'My Documents'@
+NetHood@
+NTUSER.DAT
+ntuser.dat.LOG1
+ntuser.dat.LOG2
+NTUSER.DAT{fd9a35db-49fe-11e9-aa2c-248a07783950}.TM.blf
+NTUSER.DAT{fd9a35db-49fe-11e9-aa2c-248a07783950}.TMContainer00000000000000000001                                                                                                                                                                                               .regtrans-ms
+NTUSER.DAT{fd9a35db-49fe-11e9-aa2c-248a07783950}.TMContainer00000000000000000002                                                                                                                                                                                               .regtrans-ms
+ntuser.ini
+OneDrive/
+Pictures/
+PrintHood@
+Recent@
+'Saved Games'/
+Searches/
+SendTo@
+'Start Menu'@
+Templates@
+Videos/
+'VirtualBox VMs'/
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker pull ubuntu1
+Using default tag: latest
+Error response from daemon: pull access denied for ubuntu1, repository does not                                                                                                                                                                                                exist or may require 'docker login': denied: requested access to the resource is                                                                                                                                                                                                denied
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker pull ubuntu2
+Using default tag: latest
+Error response from daemon: pull access denied for ubuntu2, repository does not                                                                                                                                                                                                exist or may require 'docker login': denied: requested access to the resource is                                                                                                                                                                                                denied
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker pull ubuntu 3
+"docker pull" requires exactly 1 argument.
+See 'docker pull --help'.
+
+Usage:  docker pull [OPTIONS] NAME[:TAG|@DIGEST]
+
+Pull an image or a repository from a registry
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED                                                                                                                                                                                                            SIZE
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker run -it -d ubuntu3
+Unable to find image 'ubuntu3:latest' locally
+C:\Program Files\Docker\Docker\resources\bin\docker.exe: Error response from dae                                                                                                                                                                                               mon: pull access denied for ubuntu3, repository does not exist or may require 'd                                                                                                                                                                                               ocker login': denied: requested access to the resource is denied.
+See 'C:\Program Files\Docker\Docker\resources\bin\docker.exe run --help'.
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker run -it -d ubuntu2
+Unable to find image 'ubuntu2:latest' locally
+C:\Program Files\Docker\Docker\resources\bin\docker.exe: Error response from daemon: pull access                                                                                                                                                                               denied for ubuntu2, repository does not exist or may require 'docker login': denied: requested ac                                                                                                                                                                              cess to the resource is denied.
+See 'C:\Program Files\Docker\Docker\resources\bin\docker.exe run --help'.
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker run -it ubuntu1
+the input device is not a TTY.  If you are using mintty, try prefixing the command with 'winpty'
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker run -it -d ubuntu1
+Unable to find image 'ubuntu1:latest' locally
+C:\Program Files\Docker\Docker\resources\bin\docker.exe: Error response from daemon: pull access                                                                                                                                                                               denied for ubuntu1, repository does not exist or may require 'docker login': denied: requested ac                                                                                                                                                                              cess to the resource is denied.
+See 'C:\Program Files\Docker\Docker\resources\bin\docker.exe run --help'.
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                                                                                                                                                                                            PORTS               NAMES
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker-ps
+bash: docker-ps: command not found
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker -ps
+unknown shorthand flag: 'p' in -ps
+See 'docker --help'.
+
+Usage:  docker [OPTIONS] COMMAND
+
+A self-sufficient runtime for containers
+
+Options:
+      --config string      Location of client config files (default
+                           "C:\\Users\\Davis\\.docker")
+  -c, --context string     Name of the context to use to connect to the
+                           daemon (overrides DOCKER_HOST env var and
+                           default context set with "docker context use")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket(s) to connect to
+  -l, --log-level string   Set the logging level
+                           ("debug"|"info"|"warn"|"error"|"fatal")
+                           (default "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default
+                           "C:\\Users\\Davis\\.docker\\ca.pem")
+      --tlscert string     Path to TLS certificate file (default
+                           "C:\\Users\\Davis\\.docker\\cert.pem")
+      --tlskey string      Path to TLS key file (default
+                           "C:\\Users\\Davis\\.docker\\key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Management Commands:
+  builder     Manage builds
+  config      Manage Docker configs
+  container   Manage containers
+  context     Manage contexts
+  image       Manage images
+  network     Manage networks
+  node        Manage Swarm nodes
+  plugin      Manage plugins
+  secret      Manage Docker secrets
+  service     Manage services
+  stack       Manage Docker stacks
+  swarm       Manage Swarm
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  build       Build an image from a Dockerfile
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  exec        Run a command in a running container
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  images      List images
+  import      Import the contents from a tarball to create a filesystem image
+  info        Display system-wide information
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  login       Log in to a Docker registry
+  logout      Log out from a Docker registry
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  ps          List containers
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  run         Run a command in a new container
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  search      Search the Docker Hub for images
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  version     Show the Docker version information
+  wait        Block until one or more containers stop, then print their exit codes
+
+Run 'docker COMMAND --help' for more information on a command.
+
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker ps-a
+docker: 'ps-a' is not a docker command.
+See 'docker --help'
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                                                                                                                                                                                            PORTS               NAMES
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                                                                                                                                                                                            PORTS               NAMES
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker exec -it bash
+"docker exec" requires at least 2 arguments.
+See 'docker exec --help'.
+
+Usage:  docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
+
+Run a command in a running container
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                                                                                                                                                                                            PORTS               NAMES
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ # exit
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                                                                                                                                                                                            PORTS               NAMES
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker stop
+"docker stop" requires at least 1 argument.
+See 'docker stop --help'.
+
+Usage:  docker stop [OPTIONS] CONTAINER [CONTAINER...]
+
+Stop one or more running containers
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                                                                                                                                                                                            PORTS               NAMES
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                                                                                                                                                                                            PORTS               NAMES
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker rm -f
+"docker rm" requires at least 1 argument.
+See 'docker rm --help'.
+
+Usage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]
+
+Remove one or more containers
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                                                                                                                                                                                            PORTS               NAMES
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker run -it
+"docker run" requires at least 1 argument.
+See 'docker run --help'.
+
+Usage:  docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+
+Run a command in a new container
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker run -it -d myapp
+Unable to find image 'myapp:latest' locally
+C:\Program Files\Docker\Docker\resources\bin\docker.exe: Error response from daemon: pull access                                                                                                                                                                               denied for myapp, repository does not exist or may require 'docker login': denied: requested acce                                                                                                                                                                              ss to the resource is denied.
+See 'C:\Program Files\Docker\Docker\resources\bin\docker.exe run --help'.
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker run -it -d ubuntu1
+Unable to find image 'ubuntu1:latest' locally
+C:\Program Files\Docker\Docker\resources\bin\docker.exe: Error response from daemon: pull access                                                                                                                                                                               denied for ubuntu1, repository does not exist or may require 'docker login': denied: requested ac                                                                                                                                                                              cess to the resource is denied.
+See 'C:\Program Files\Docker\Docker\resources\bin\docker.exe run --help'.
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ # apt-get update
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ # apt-get install apache2
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ /# apt-get install apache2
+bash: /#: No such file or directory
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker commit  afacb8b audreyaudrey/myapacheapp
+Error response from daemon: No such container: afacb8b
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker commit afacb8b audreyaudrey/my apacheapp
+"docker commit" requires at least 1 and at most 2 arguments.
+See 'docker commit --help'.
+
+Usage:  docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]
+
+Create a new image from a container's changes
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker commit afacb8b audreyaudrey/my apacheapp
+"docker commit" requires at least 1 and at most 2 arguments.
+See 'docker commit --help'.
+
+Usage:  docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]
+
+Create a new image from a container's changes
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+myapp               latest              ab4503efa806        2 hours ago         251MB
+hello-world         latest              c7f4e41fba3a        2 weeks ago         251MB
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker rm -f  afacb8b
+Error: No such container: afacb8b
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker images
+bash: docker: command not found
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+docker               latest              ab4503efa806        2 hours ago         251MB
+hello-world         latest              c7f4e41fba3a        2 weeks ago         251MB
+
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker commit 1565ae55f146 audreyaudrey/my apacheapp
+"docker commit" requires at least 1 and at most 2 arguments.
+See 'docker commit --help'.
+
+Usage:  docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]
+
+Create a new image from a container's changes
+
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$  docker commit 1565ae55f146 audreyaudrey/myapacheapp
+sha256:3b1afec5a46393284c87e519641f2400194dd8aae97683cefb9b83e46fa733bd
+d
+
+
+$ docker run -it -p 82:80 -d audreyaudrey/myapacheapp
+e5c08e13f1670c1a2a79db81b86575fa21546e5489ba637a0ca5362c20e077ae
+C:\Program Files\Docker\Docker\resources\bin\docker.exe: Error response from daemon: hcsshim::CreateComputeSystem e5c08e13f1670c1a2a79db81b86575fa21546e5489ba637a0ca5362c20e077ae: The virtual machine could not be started because a required feature is not installed.
+(extra info: {"SystemType":"Container","Name":"e5c08e13f1670c1a2a79db81b86575fa21546e5489ba637a0ca5362c20e077ae","Owner":"docker","IgnoreFlushesDuringBoot":true,"LayerFolderPath":"C:\\ProgramData\\Docker\\windowsfilter\\e5c08e13f1670c1a2a79db81b86575fa21546e5489ba637a0ca5362c20e077ae","Layers":[{"ID":"f61a3652-5aa8-5424-9307-8872bc3b8792","Path":"C:\\ProgramData\\Docker\\windowsfilter\\8c93985ba7e4cbf97d94c6ecf266736bc42d252e3781ba22612e7d8cf8234d25"},{"ID":"f7d8f81a-2a1b-57c5-b0fb-64ae80fa04b8","Path":"C:\\ProgramData\\Docker\\windowsfilter\\ef4e443d31f31fed1cd53b30521cdec52e3ff3391d2aa8298c1ce52dcd8919c7"},{"ID":"363e2f78-7f20-5f34-87bf-fe5af9728885","Path":"C:\\ProgramData\\Docker\\windowsfilter\\43b46a79716f158c3123a51133822194eca16af2a630f2328c94171d86cf37c4"},{"ID":"f3bb1f2d-03d6-587a-b210-9a6bedb961b7","Path":"C:\\ProgramData\\Docker\\windowsfilter\\324bbabacb1e90ab56cf3f7457672fb460e31282b4fc39a48bbce24cb78d5282"}],"HostName":"e5c08e13f167","HvPartition":true,"EndpointList":["861F93D0-209A-47EA-A4A9-AC87B6C8AC70"],"HvRuntime":{"ImagePath":"C:\\ProgramData\\Docker\\windowsfilter\\324bbabacb1e90ab56cf3f7457672fb460e31282b4fc39a48bbce24cb78d5282\\UtilityVM"},"AllowUnqualifiedDNSQuery":true}).
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED                                                                                                                                                                                                            STATUS              PORTS               NAMES
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker ps -a
+CONTAINER ID        IMAGE                      COMMAND                   CREATED             STATUS              PORTS                NAMES
+e5c08e13f167        audreyaudrey/myapacheapp   "cmd /C 'type C:\\hel…"   4 minutes ago       Created             0.0.0.0:82->80/tcp   heuristic_payne
+c9e8c387b904        myapp                      "bash"                    2 hours ago         Created                                  admiring_golick
+af842fe5dbca        hello-world                "cmd /C 'type C:\\hel…"   2 hours ago         Created                                  wonderful_bardeen
+b713a601300d        hello-world                "cmd /C 'type C:\\hel…"   2 hours ago         Created                                  wizardly_payne
+131393ca3f01        myapp                      "cmd /C 'type C:\\hel…"   3 hours ago         Created                                  trusting_hopper
+6d4b5f5d56e9        hello-world                "cmd /C 'type C:\\hel…"   3 hours ago         Created                                  boring_wilbur
+9ee50023be23        hello-world                "cmd /C 'type C:\\hel…"   3 hours ago         Created                                  exciting_edison
+1565ae55f146        hello-world                "cmd /C 'type C:\\hel…"   3 hours ago         Created                                  intelligent_poitras
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker exec -it e5c08e13f167 bash
+the input device is not a TTY.  If you are using mintty, try prefixing the command with 'winpty'
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ service apache2 status
+bash: service: command not found
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ srvice apache2 start
+bash: srvice: command not found
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$
+ Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker ps -a
+CONTAINER ID        IMAGE                      COMMAND                   CREATED
+e5c08e13f167        audreyaudrey/myapacheapp   "cmd /C 'type C:\\hel…"   4 minut
+c9e8c387b904        myapp                      "bash"                    2 hours
+af842fe5dbca        hello-world                "cmd /C 'type C:\\hel…"   2 hours
+b713a601300d        hello-world                "cmd /C 'type C:\\hel…"   2 hours
+131393ca3f01        myapp                      "cmd /C 'type C:\\hel…"   3 hours
+6d4b5f5d56e9        hello-world                "cmd /C 'type C:\\hel…"   3 hours
+9ee50023be23        hello-world                "cmd /C 'type C:\\hel…"   3 hours
+1565ae55f146        hello-world                "cmd /C 'type C:\\hel…"   3 hours
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker exec -it e5c08e13f167 bash
+the input device is not a TTY.  If you are using mintty, try prefixing the comma
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ service apache2 status
+bash: service: command not found
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ srvice apache2 start
+bash: srvice: command not found
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker login
+Authenticating with existing credentials...
+Login Succeeded
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker push audreyaudrey/myapacheapp
+The push refers to repository [docker.io/audreyaudrey/myapacheapp]
+8d92be77ca7f: Preparing
+e89f7df02616: Preparing
+2b6dc8c05bdb: Preparing
+3492c6ad7ce2: Preparing
+3492c6ad7ce2: Skipped foreign layer
+e89f7df02616: Mounted from library/hello-world
+2b6dc8c05bdb: Mounted from library/hello-world
+8d92be77ca7f: Pushed
+latest: digest: sha256:e4b4de8ca9279e61dd6f52d897c62793cab88cecd42432d2ff77a4bcf7896d96 size: 1331
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker exec -it e5c08e13f167 bash
+the input device is not a TTY.  If you are using mintty, try prefixing the comma
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ service apache2 status
+bash: service: command not found
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ srvice apache2 start
+bash: srvice: command not found
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker login
+Authenticating with existing credentials...
+Login Succeeded
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ docker push audreyaudrey/myapacheapp
+The push refers to repository [docker.io/audreyaudrey/myapacheapp]
+8d92be77ca7f: Preparing
+e89f7df02616: Preparing
+2b6dc8c05bdb: Preparing
+3492c6ad7ce2: Preparing
+3492c6ad7ce2: Skipped foreign layer
+e89f7df02616: Mounted from library/hello-world
+2b6dc8c05bdb: Mounted from library/hello-world
+8d92be77ca7f: Pushed
+latest: digest: sha256:e4b4de8ca9279e61dd6f52d897c62793cab88cecd42432d2ff77a4bcf7896d96 size: 1331
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$ ls
+'3D Objects'/
+Anaconda3/
+AppData/
+'Application Data'@
+C++/
+Contacts/
+Cookies@
+Desktop/
+Documents/
+Downloads/
+Favorites/
+Links/
+'Local Settings'@
+MicrosoftEdgeBackups/
+Music/
+'My Documents'@
+myapp/
+mynewapp/
+NetHood@
+NTUSER.DAT
+ntuser.dat.LOG1
+ntuser.dat.LOG2
+NTUSER.DAT{fd9a35db-49fe-11e9-aa2c-248a07783950}.TM.blf
+NTUSER.DAT{fd9a35db-49fe-11e9-aa2c-248a07783950}.TMContainer00000000000000000001.regtrans-ms
+NTUSER.DAT{fd9a35db-49fe-11e9-aa2c-248a07783950}.TMContainer00000000000000000002.regtrans-ms
+ntuser.ini
+OneDrive/
+Pictures/
+PrintHood@
+Recent@
+'Saved Games'/
+Searches/
+SendTo@
+'Start Menu'@
+Templates@
+Videos/
+'VirtualBox VMs'/
+
+Davis@DESKTOP-5M15C63 MINGW64 ~
+$
